@@ -57,7 +57,10 @@ INSERT INTO grade VALUES
 (3.3,'B+'),
 (3,'B'),
 (2.7,'B-'),
-(2.3,'C+');
+(2.3,'C+'),
+(3.7, 'A-');
+
+select
 ROUND(sum((grade.g_Value) * (courses.hours)) / sum(courses.hours),2) as semester_gpa
 from courses
 join semster on semster.NUM = courses.semster_num
@@ -70,3 +73,4 @@ commulative_gpa
 from courses
 join semster on semster.NUM = courses.semster_num
 join grade on grade.grade = courses.grade;
+
