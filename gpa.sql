@@ -36,7 +36,8 @@ insert into courses Values
 ('chemistry',1,'B+',3),
 ('accounting',1,'A',2),
 ('critical thinking',1,'A',2),
-('production',1,'B',2);
+('production',1,'B',2),
+('probaility',6,'A',2);
 
 
 
@@ -45,7 +46,8 @@ INSERT INTO semster VALUES
 (2, 'spring24'),
 (3, 'summer24'),
 (4, 'fall24'),
-(5,'spring25');
+(5,'spring25'),
+(6,'summer25');
 
 CREATE TABLE grade(
    g_Value FLOAT,
@@ -73,4 +75,5 @@ commulative_gpa
 from courses
 join semster on semster.NUM = courses.semster_num
 join grade on grade.grade = courses.grade;
+
 
