@@ -67,7 +67,7 @@ ROUND(sum((grade.g_Value) * (courses.hours)) / sum(courses.hours),2) as semester
 from courses
 join semster on semster.NUM = courses.semster_num
 join grade on grade.grade = courses.grade
-group by semster.name;
+group by semster.NUM;
 
 select 
 ROUND(sum((grade.g_Value) * (courses.hours)) / sum(courses.hours),2) as 
@@ -75,5 +75,6 @@ commulative_gpa
 from courses
 join semster on semster.NUM = courses.semster_num
 join grade on grade.grade = courses.grade;
+
 
 
